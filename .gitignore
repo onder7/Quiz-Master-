@@ -1,0 +1,31 @@
+# Vendor klasörü
+/vendor/
+
+# Ortam değişkenleri
+.env
+
+# IDE dosyaları
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS dosyaları
+.DS_Store
+Thumbs.db
+
+# Log dosyaları
+*.log
+/logs/
+
+# Ses dosyaları (telif hakkı nedeniyle)
+/public/audio/*
+!/public/audio/.gitkeep
+
+# Yedek dosyaları
+*.bak
+*.backup
+*.sql~
+
+# Composer
+composer.lock
