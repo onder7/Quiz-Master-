@@ -57,8 +57,14 @@ echo -e "${YELLOW}Veritabanı Kurulumu${NC}"
 echo "===================="
 echo "1. quiz_app veritabanını oluşturun"
 echo "2. quiz_app (2).sql dosyasını import edin"
-echo "3. sample_questions.sql dosyasını import edin (opsiyonel)"
-echo "4. database_updates.sql dosyasını çalıştırın"
+echo "3. multiplayer_tables.sql dosyasını import edin"
+echo "4. sample_questions.sql dosyasını import edin (opsiyonel)"
+echo "5. database_updates.sql dosyasını çalıştırın"
+echo ""
+
+# MySQL event scheduler kontrolü
+echo -e "${YELLOW}MySQL Event Scheduler'ı aktifleştirin:${NC}"
+echo "  SET GLOBAL event_scheduler = ON;"
 echo ""
 
 # Sunucu başlatma seçenekleri
