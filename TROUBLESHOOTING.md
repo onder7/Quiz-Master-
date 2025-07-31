@@ -1,5 +1,3 @@
-#Hata Ayıklama Kılavuzu
-
 # Quiz Master - Hata Ayıklama Kılavuzu
 
 ## 🔧 Yaygın Hatalar ve Çözümleri
