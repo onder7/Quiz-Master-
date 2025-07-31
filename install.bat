@@ -1,4 +1,3 @@
-#Windows Kurulum Scripti
 @echo off
 echo ==============================
 echo Quiz Master Kurulum Scripti
@@ -58,8 +57,10 @@ echo Veritabani kurulumu:
 echo 1. phpMyAdmin'e gidin
 echo 2. quiz_app veritabanini olusturun
 echo 3. quiz_app (2).sql dosyasini import edin
-echo 4. sample_questions.sql dosyasini import edin
-echo 5. database_updates.sql dosyasini calistirin
+echo 4. multiplayer_tables.sql dosyasini import edin
+echo 5. sample_questions.sql dosyasini import edin
+echo 6. database_updates.sql dosyasini calistirin
+echo 7. MySQL Event Scheduler'i aktif edin: SET GLOBAL event_scheduler = ON;
 echo.
 echo Uygulamayi baslatmak icin:
 echo   php -S localhost:8000
