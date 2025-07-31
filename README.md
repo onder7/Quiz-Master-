@@ -1,157 +1,252 @@
-# Quiz Master - Kaynak kodları için onder7@gmail.com mail gönderimi yapabilirsiniz
-android apk (webview) ile mobil uyumlu kullanabilirsiniz.
+# Quiz Master - Bilgi Yarışması Uygulaması
 
-test online : https://quiz-test.online/
+FlightPHP framework'ü kullanılarak geliştirilmiş, mobil uyumlu bilgi yarışması uygulaması.
 
-<img width="1215" height="809" alt="image" src="https://github.com/user-attachments/assets/750eaf46-3c22-4e73-ada1-2e8c7d09ebf1" />
+<img width="1526" height="815" alt="image" src="https://github.com/user-attachments/assets/4dd45476-cc47-4d2b-9ed8-2fecd3e931c0" />
+
+<img width="1182" height="663" alt="image" src="https://github.com/user-attachments/assets/6f922438-5d15-4025-b79b-b9e470dd5c7a" />
+
+<img width="1193" height="808" alt="image" src="https://github.com/user-attachments/assets/d0319cde-5357-4eb6-82e7-244203899ac6" />
 
 
-## 🎮 Oyun Özellikleri
+## Özellikler
 
-### Quiz Mekanikleri
-- **Zorluk Seviyeleri**: Kolay, Orta, Zor ve Karışık modlar
-- **Kategori Sistemi**: Farklı konularda sorular (Genel Kültür, Matematik, Coğrafya, vb.)
-- **Süre Limiti**: Her soru için 30 saniye
-- **Dinamik Soru Yükleme**: Seçilen kriterlere göre rastgele soru seçimi
-- **İlerleme Takibi**: Görsel ilerleme çubuğu
-- **Anlık Geri Bildirim**: Doğru/yanlış cevap animasyonları
+- 📱 Tamamen mobil uyumlu responsive tasarım
+- 🎨 Animasyonlu arka plan ve modern UI
+- 🔊 Ses efektleri (arka plan müziği, doğru/yanlış sesleri, süre uyarısı)
+- 👥 **Çok Oyunculu Mod** (Yeni!)
+  - İki oyuncu aynı anda yarışabilir
+  - Oda sistemi ile kolay eşleşme
+  - Gerçek zamanlı skor takibi
+  - Canlı rakip ilerleme göstergesi
+- 🏆 Liderlik tablosu (günlük, haftalık, aylık, tüm zamanlar)
+- 📊 Kullanıcı istatistikleri
+- ⏱️ Soru başına 30 saniye süre limiti
+- 🎯 Zorluk seviyeleri (Kolay, Orta, Zor, Karışık)
+- 📚 Kategori bazlı sorular
+- 🔐 Kullanıcı kayıt ve giriş sistemi
 
-### Ses Efektleri
-- 🎵 Arka plan müziği
-- ✅ Doğru cevap sesi
-- ❌ Yanlış cevap sesi
-- ⏰ Süre uyarı sesi (son 10 saniye)
-- 🎉 Quiz tamamlama sesi
-- 🔊 Buton tıklama sesleri
-- 🔇 Ses açma/kapama kontrolü
+## Gereksinimler
 
-### Kullanıcı Deneyimi
-- 📱 **Tam Mobil Uyumlu**: Responsive tasarım
-- ⌨️ **Klavye Kısayolları**: 1-4 tuşları ile cevap, Enter ile devam
-- 🎨 **Modern UI**: Glassmorphism efektleri, smooth animasyonlar
-- 🌊 **Animasyonlu Arka Plan**: Sürekli hareket eden daireler
-- 💫 **Ripple Efektleri**: Buton tıklamalarında dalga animasyonu
+- PHP >= 7.4 (PHP 8.1+ tam uyumlu)
+- MySQL >= 5.7
+- Composer
+- Apache veya Nginx (mod_rewrite etkin)
 
-## 📊 İstatistik ve Skorlar
+## Kurulum
 
-### Kişisel İstatistikler
-- Toplam oyun sayısı
-- Ortalama başarı yüzdesi
-- En iyi skor
-- Ortalama tamamlama süresi
-- Son 5 oyun geçmişi
+### 1. Projeyi İndirin
 
-### Liderlik Tablosu
-- **Dönemsel Sıralama**: Günlük, Haftalık, Aylık, Tüm Zamanlar
-- **Kullanıcı Sıralaması**: Kendi pozisyonunuzu görme
-- **Detaylı Skorlar**: Yüzde, süre ve tarih bilgileri
-- **Görsel İşaretler**: İlk 3 için özel rozetler (🏆🥈🥉)
+```bash
+git clone https://github.com/yourusername/quiz-master.git
+cd quiz-master
+```
 
-## 👤 Kullanıcı Sistemi
+### 2. Bağımlılıkları Yükleyin
 
-### Hesap Yönetimi
-- Güvenli kayıt ve giriş
-- Şifre hashleme (bcrypt)
-- Oturum yönetimi
-- Otomatik çıkış yapma
+```bash
+composer install
+```
 
-### Profil Özellikleri
-- Kullanıcı adı ve e-posta
-- Oyun geçmişi
-- Başarı istatistikleri
-- Sıralama pozisyonu
+### 3. Veritabanını Oluşturun
 
-## 🎯 Quiz Ayarları
+- phpMyAdmin veya MySQL komut satırını kullanarak `quiz_app` adında bir veritabanı oluşturun
+- Verilen `quiz_app (2).sql` dosyasını import edin
 
-### Özelleştirme Seçenekleri
-- **Zorluk Seçimi**: 4 farklı seviye
-- **Kategori Filtreleme**: İlgi alanına göre soru seçimi
-- **Soru Sayısı**: 5, 10, 15 veya 20 soru
-- **Dinamik Kategori**: Zorluk seviyesine göre kategori güncelleme
+### 4. Veritabanı Bağlantısını Yapılandırın
 
-### Hızlı Başlatma
-- Ana sayfadan tek tıkla başlatma
-- Önceden ayarlanmış zorluk seviyeleri
-- Son ayarları hatırlama
+`config/database.php` dosyasını açın ve veritabanı bilgilerinizi güncelleyin:
 
-## 📱 Mobil Özellikler
+```php
+$host = '127.0.0.1';
+$port = '3306';
+$dbname = 'quiz_app';
+$username = 'root';
+$password = '';
+```
 
-### Touch Optimizasyonu
-- Büyük dokunma alanları
-- Swipe desteği (gelecek güncelleme)
-- Mobil klavye uyumlu
-- Portre/Yatay mod desteği
+### 5. Dosya İzinlerini Ayarlayın
 
-### PWA Hazırlığı
-- Tam ekran modu
-- Offline çalışma altyapısı
-- App benzeri deneyim
-- Hızlı yükleme
+```bash
+chmod 755 -R .
+chmod 777 -R public/
+```
 
-## 🔒 Güvenlik
+### 6. Uygulamayı Başlatın
 
-### Veri Koruması
-- SQL Injection koruması (PDO Prepared Statements)
-- XSS koruması (Output encoding)
-- CSRF token altyapısı
-- Güvenli şifre saklama
+#### Geliştirme Ortamı (PHP Built-in Server)
 
-### Oturum Güvenliği
-- Güvenli oturum yönetimi
-- Otomatik oturum sonlandırma
-- Protected route kontrolü
-- Yetkilendirme sistemi
+```bash
+composer start
+# veya
+php -S localhost:8000
+```
 
-## 🎨 Görsel Özellikler
+#### Production (Apache)
 
-### Animasyonlar
-- Smooth geçişler
-- Loading animasyonları
-- Hover efektleri
-- Başarı kutlama animasyonları
+Apache DocumentRoot'u proje klasörüne yönlendirin ve mod_rewrite'ın etkin olduğundan emin olun.
 
-### Tema
-- Modern renk paleti
-- Değiştirilebilir CSS değişkenleri
-- Dark mode altyapısı (gelecek)
-- Özelleştirilebilir görünüm
+## Proje Yapısı
 
-## 📤 Sosyal Özellikler
+```
+quiz-master/
+├── config/
+│   ├── database.php        # Veritabanı yapılandırması
+│   └── app.php            # Uygulama ayarları
+├── controllers/
+│   ├── AuthController.php  # Kimlik doğrulama işlemleri
+│   ├── QuizController.php  # Quiz işlemleri
+│   ├── ScoreController.php # Skor ve liderlik tablosu
+│   └── MultiplayerController.php # Çok oyunculu mod
+├── models/
+│   ├── User.php           # Kullanıcı modeli
+│   ├── Question.php       # Soru modeli
+│   ├── Score.php          # Skor modeli
+│   ├── UserAnswer.php     # Kullanıcı cevapları modeli
+│   ├── GameRoom.php       # Oyun odası modeli
+│   ├── GamePlayer.php     # Oyuncu durumu modeli
+│   ├── GameAnswer.php     # Oyun cevapları modeli
+│   └── GameResult.php     # Oyun sonuçları modeli
+├── views/
+│   ├── layout/
+│   │   ├── header.php     # Sayfa başlığı
+│   │   └── footer.php     # Sayfa sonu
+│   ├── auth/
+│   │   ├── login.php      # Giriş sayfası
+│   │   └── register.php   # Kayıt sayfası
+│   ├── quiz/
+│   │   ├── home.php       # Ana sayfa
+│   │   ├── setup.php      # Quiz ayarları
+│   │   ├── play.php       # Quiz oyun ekranı
+│   │   └── result.php     # Sonuç ekranı
+│   ├── score/
+│   │   └── leaderboard.php # Liderlik tablosu
+│   └── multiplayer/
+│       ├── lobby.php      # Çok oyunculu lobi
+│       ├── waiting.php    # Bekleme odası
+│       ├── play.php       # Çok oyunculu oyun
+│       └── result.php     # Oyun sonucu
+├── public/
+│   ├── css/
+│   │   └── style.css      # Ana stil dosyası
+│   ├── js/
+│   │   └── app.js         # JavaScript dosyası
+│   └── audio/             # Ses dosyaları klasörü
+├── helpers/
+│   └── functions.php      # Yardımcı fonksiyonlar
+├── logs/                  # Log dosyaları
+├── .htaccess             # URL yönlendirme
+├── index.php             # Ana giriş dosyası
+├── composer.json         # Composer yapılandırması
+└── README.md             # Bu dosya─ result.php     # Sonuç ekranı
+│   └── score/
+│       └── leaderboard.php # Liderlik tablosu
+├── public/
+│   ├── css/
+│   │   └── style.css      # Ana stil dosyası
+│   ├── js/
+│   │   └── app.js         # JavaScript dosyası
+│   └── audio/             # Ses dosyaları klasörü
+├── .htaccess              # URL yönlendirme
+├── index.php              # Ana giriş dosyası
+├── composer.json          # Composer yapılandırması
+└── README.md              # Bu dosya
+```
 
-### Paylaşım
-- Twitter entegrasyonu
-- Facebook paylaşımı
-- WhatsApp ile gönderme
-- Skor paylaşma linkleri
+## Ses Dosyaları
 
-### Topluluk (Gelecek)
-- Arkadaş listesi
-- Özel yarışmalar
-- Haftalık turnuvalar
-- Başarı rozetleri
+Aşağıdaki ses dosyalarını `public/audio/` klasörüne eklemeniz gerekmektedir:
 
-## 🛠️ Teknik Özellikler
+- `quiz-background.mp3/.ogg` - Arka plan müziği
+- `correct-answer.mp3/.wav` - Doğru cevap sesi
+- `wrong-answer.mp3/.wav` - Yanlış cevap sesi
+- `timer-warning.mp3/.wav` - Süre uyarı sesi
+- `quiz-complete.mp3/.wav` - Quiz tamamlama sesi
+- `button-click.mp3/.wav` - Buton tıklama sesi
 
-### Performans
-- Optimize edilmiş sorgular
-- Lazy loading
-- Önbellekleme altyapısı
-- Hızlı sayfa yüklemeleri
+## Kullanım
 
-### Ölçeklenebilirlik
-- Modüler kod yapısı
-- MVC mimarisi
-- RESTful API endpoints
-- Docker desteği
+### 1. Kayıt Olma
+- Ana sayfada "Kayıt Ol" butonuna tıklayın
+- Kullanıcı adı, e-posta ve şifre bilgilerinizi girin
+- Kayıt olduktan sonra otomatik olarak giriş yapılır
 
-## 📈 Gelecek Özellikler
+### 2. Tek Oyunculu Quiz
+- Ana sayfadan zorluk seviyesi seçerek hızlı başlayabilirsiniz
+- Veya "Özel Quiz Oluştur" ile detaylı ayarlar yapabilirsiniz:
+  - Zorluk seviyesi (Kolay, Orta, Zor, Karışık)
+  - Kategori seçimi
+  - Soru sayısı (5, 10, 15, 20)
 
-### Planlanan Güncellemeler
-- 🌙 Dark mode
-- 🏅 Başarı sistemi
-- 👥 Çok oyunculu mod
-- 📚 Soru ekleme paneli
-- 📱 Mobil uygulama
-- 🌍 Çoklu dil desteği
-- 🎯 Özel quiz oluşturma
-- 📊 Detaylı analitikler
+### 3. Çok Oyunculu Mod
+- Ana sayfadan "Çok Oyunculu Mod" butonuna tıklayın
+- **Oda Oluşturma:**
+  - "Oda Oluştur" butonuna tıklayın
+  - Zorluk ve soru sayısını seçin
+  - Oluşan 6 haneli kodu arkadaşınızla paylaşın
+- **Odaya Katılma:**
+  - Arkadaşınızdan aldığınız kodu girin
+  - "Katıl" butonuna basın
+- Her iki oyuncu "Hazırım" dediğinde oyun başlar
+- Aynı sorular, aynı süre, gerçek zamanlı yarışma!
+
+### 4. Quiz Oynama
+- Her soru için 30 saniye süreniz vardır
+- 4 şıktan birini seçin
+- Cevapladıktan sonra doğru/yanlış gösterilir
+- 2 saniye sonra otomatik olarak sonraki soruya geçer
+
+### 5. Sonuçlar
+- Quiz bitiminde toplam skorunuz gösterilir
+- Başarı yüzdesi hesaplanır
+- Çok oyunculu modda kazanan belirlenir
+- Sonuçlarınızı sosyal medyada paylaşabilirsiniz
+
+### 6. Liderlik Tablosu
+- Günlük, haftalık, aylık ve tüm zamanların en iyilerini görün
+- Kendi sıralamanızı takip edin
+
+## Veritabanına Soru Ekleme
+
+SQL kullanarak yeni sorular ekleyebilirsiniz:
+
+```sql
+INSERT INTO questions 
+(question_text, option_a, option_b, option_c, option_d, correct_answer, difficulty, category) 
+VALUES 
+('Türkiye\'nin başkenti neresidir?', 'İstanbul', 'Ankara', 'İzmir', 'Bursa', 'b', 'easy', 'coğrafya'),
+('2 + 2 kaç eder?', '3', '4', '5', '6', 'b', 'easy', 'matematik');
+```
+
+## Özelleştirme
+
+### Renk Teması
+`public/css/style.css` dosyasındaki CSS değişkenlerini düzenleyerek renk temasını değiştirebilirsiniz:
+
+```css
+:root {
+    --primary-color: #6366f1;
+    --secondary-color: #f59e0b;
+    --success-color: #10b981;
+    --danger-color: #ef4444;
+    /* ... */
+}
+```
+
+### Süre Limiti
+`public/js/app.js` dosyasında `timeRemaining` değişkenini değiştirerek soru başına süreyi ayarlayabilirsiniz.
+
+## Güvenlik Notları
+
+- Tüm kullanıcı girdileri `htmlspecialchars()` ile temizlenir
+- Şifreler `password_hash()` ile güvenli şekilde saklanır
+- SQL injection koruması için PDO prepared statements kullanılır
+- XSS koruması için output encoding uygulanır
+
+## Lisans
+
+Bu proje MIT lisansı altında lisanslanmıştır.
+
+## Destek
+
+Sorularınız veya önerileriniz için issue açabilir veya pull request gönderebilirsiniz.
