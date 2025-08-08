@@ -2,6 +2,9 @@
 DEMO: https://quiz-test.online/
 FlightPHP framework'ü kullanılarak geliştirilmiş, mobil uyumlu bilgi yarışması uygulaması. Android için webview uygulaması ile birlikte kaynak kodlara onder7@gmail.com aeposta gödnererek iletişime geçebilirsiniz.
 
+<img width="403" height="784" alt="image" src="https://github.com/user-attachments/assets/fde633b4-5e64-4ece-a251-2e15b54b49b2" />
+
+
 <img width="1526" height="815" alt="image" src="https://github.com/user-attachments/assets/4dd45476-cc47-4d2b-9ed8-2fecd3e931c0" />
 
 <img width="1182" height="663" alt="image" src="https://github.com/user-attachments/assets/6f922438-5d15-4025-b79b-b9e470dd5c7a" />
