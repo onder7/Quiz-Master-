@@ -2,254 +2,290 @@
 DEMO: https://quiz-test.online/
 FlightPHP framework'ü kullanılarak geliştirilmiş, mobil uyumlu bilgi yarışması uygulaması. Android için webview uygulaması ile birlikte kaynak kodlara onder7@gmail.com aeposta gödnererek iletişime geçebilirsiniz.
 
-<img width="403" height="784" alt="image" src="https://github.com/user-attachments/assets/fde633b4-5e64-4ece-a251-2e15b54b49b2" />
+<img width="1906" height="924" alt="image" src="https://github.com/user-attachments/assets/091fdeab-a8ba-4dff-b5b6-61702132f1c9" />
+
+<img width="1898" height="925" alt="image" src="https://github.com/user-attachments/assets/e9fa9354-3197-4bd6-a794-5d21f258b841" />
 
 
-<img width="1526" height="815" alt="image" src="https://github.com/user-attachments/assets/4dd45476-cc47-4d2b-9ed8-2fecd3e931c0" />
+# Quiz Master - İnteraktif Quiz Uygulaması
 
-<img width="1182" height="663" alt="image" src="https://github.com/user-attachments/assets/6f922438-5d15-4025-b79b-b9e470dd5c7a" />
+## Türkçe
 
-<img width="1193" height="808" alt="image" src="https://github.com/user-attachments/assets/d0319cde-5357-4eb6-82e7-244203899ac6" />
+### 📋 Proje Hakkında
+Quiz Master, PHP Flight framework kullanılarak geliştirilmiş modern bir quiz uygulamasıdır. Kullanıcılar quiz çözebilir, çoklu oyuncu modunda yarışabilir ve admin paneli üzerinden sistemi yönetebilir.
 
+### ✨ Özellikler
 
-## Özellikler
+#### 🎮 Oyuncu Özellikleri
+- **Kullanıcı Kayıt/Giriş Sistemi**: E-posta/şifre ve sosyal medya girişi
+- **Quiz Çözme**: Farklı kategori ve zorluk seviyelerinde sorular
+- **Çoklu Oyuncu Modu**: Gerçek zamanlı rakiple yarışma
+- **Skor Tablosu**: En yüksek skorları görüntüleme
+- **Kişisel İstatistikler**: Performans takibi
 
-- 📱 Tamamen mobil uyumlu responsive tasarım
-- 🎨 Animasyonlu arka plan ve modern UI
-- 🔊 Ses efektleri (arka plan müziği, doğru/yanlış sesleri, süre uyarısı)
-- 👥 **Çok Oyunculu Mod** (Yeni!)
-  - İki oyuncu aynı anda yarışabilir
-  - Oda sistemi ile kolay eşleşme
-  - Gerçek zamanlı skor takibi
-  - Canlı rakip ilerleme göstergesi
-- 🏆 Liderlik tablosu (günlük, haftalık, aylık, tüm zamanlar)
-- 📊 Kullanıcı istatistikleri
-- ⏱️ Soru başına 30 saniye süre limiti
-- 🎯 Zorluk seviyeleri (Kolay, Orta, Zor, Karışık)
-- 📚 Kategori bazlı sorular
-- 🔐 Kullanıcı kayıt ve giriş sistemi
+#### 🛠️ Admin Paneli
+- **Kullanıcı Yönetimi**: Kullanıcıları görüntüleme, düzenleme ve yönetme
+- **Soru Yönetimi**: Modern kart tabanlı soru listesi
+- **Soru Ekleme/Düzenleme**: Canlı önizleme ile soru oluşturma
+- **Dashboard**: Detaylı sistem istatistikleri
+- **İstatistikler**: Kullanıcı aktiviteleri ve oyun verileri
 
-## Gereksinimler
+#### 🎨 Tasarım Özellikleri
+- **Modern UI/UX**: Glassmorphism tasarım
+- **Koyu/Açık Tema**: Otomatik tema geçişi
+- **Responsive Tasarım**: Mobil uyumlu arayüz
+- **Smooth Animasyonlar**: Kullanıcı dostu geçişler
 
-- PHP >= 7.4 (PHP 8.1+ tam uyumlu)
-- MySQL >= 5.7
+### 🚀 Teknolojiler
+- **Backend**: PHP 8+, Flight Framework
+- **Database**: MySQL/MariaDB
+- **Frontend**: HTML5, CSS3, JavaScript (ES6+)
+- **Styling**: CSS Custom Properties, Flexbox, Grid
+- **Authentication**: OAuth (Google, Facebook, Twitter)
+- **Real-time**: AJAX polling
+
+### 📦 Kurulum
+
+#### Gereksinimler
+- PHP 8.0 veya üzeri
+- MySQL 5.7 veya üzeri
+- Web sunucu (Apache/Nginx)
 - Composer
-- Apache veya Nginx (mod_rewrite etkin)
 
-## Kurulum
+#### Adımlar
+1. **Projeyi klonlayın**
+   ```bash
+   git clone [repository-url]
+   cd bilg
+   ```
 
-### 1. Projeyi İndirin
+2. **Bağımlılıkları yükleyin**
+   ```bash
+   composer install
+   ```
 
-```bash
-git clone https://github.com/yourusername/quiz-master.git
-cd quiz-master
-```
+3. **Veritabanını oluşturun**
+   ```sql
+   CREATE DATABASE quiz_db;
+   ```
 
-### 2. Bağımlılıkları Yükleyin
+4. **Yapılandırma dosyalarını düzenleyin**
+   - `config/database.php` - Veritabanı bağlantısı
+   - `config/google.php` - Google OAuth
+   - `config/facebook.php` - Facebook OAuth
+   - `config/twitter.php` - Twitter OAuth
 
-```bash
-composer install
-```
+5. **Veritabanı tablolarını oluşturun**
+   - SQL dosyalarını çalıştırın veya uygulama ilk çalıştırıldığında otomatik oluşturulacaktır
 
-### 3. Veritabanını Oluşturun
+6. **Web sunucusunu başlatın**
+   ```bash
+   # WAMP/XAMPP kullanıyorsanız
+   # Projeyi htdocs klasörüne yerleştirin
+   
+   # Built-in server
+   php -S localhost:8000
+   ```
 
-- phpMyAdmin veya MySQL komut satırını kullanarak `quiz_app` adında bir veritabanı oluşturun
-- Verilen `quiz_app (2).sql` dosyasını import edin
+### 🔧 Yapılandırma
 
-### 4. Veritabanı Bağlantısını Yapılandırın
-
-`config/database.php` dosyasını açın ve veritabanı bilgilerinizi güncelleyin:
-
+#### Veritabanı Ayarları
 ```php
-$host = '127.0.0.1';
-$port = '3306';
-$dbname = 'quiz_app';
-$username = 'root';
-$password = '';
+// config/database.php
+$host = 'localhost';
+$dbname = 'quiz_db';
+$username = 'your_username';
+$password = 'your_password';
 ```
 
-### 5. Dosya İzinlerini Ayarlayın
-
-```bash
-chmod 755 -R .
-chmod 777 -R public/
+#### OAuth Ayarları
+```php
+// config/google.php
+define('GOOGLE_CLIENT_ID', 'your_google_client_id');
+define('GOOGLE_CLIENT_SECRET', 'your_google_client_secret');
 ```
 
-### 6. Uygulamayı Başlatın
+### 🎯 Kullanım
 
-#### Geliştirme Ortamı (PHP Built-in Server)
+#### Admin Hesabı
+Varsayılan admin hesabı:
+- **Kullanıcı adı**: admin
+- **Şifre**: admin123
 
-```bash
-composer start
-# veya
-php -S localhost:8000
+İlk giriş sırasında otomatik olarak oluşturulur.
+
+#### Admin Paneli
+- `/admin/login` - Admin girişi
+- `/admin/dashboard` - Ana kontrol paneli
+- `/admin/users` - Kullanıcı yönetimi
+- `/admin/questions` - Soru yönetimi
+
+### 📁 Proje Yapısı
+```
+bilg/
+├── config/                 # Yapılandırma dosyaları
+├── controllers/            # MVC Controller'ları
+├── models/                # MVC Model'leri
+├── views/                 # View dosyaları
+│   ├── admin/            # Admin panel görünümleri
+│   ├── auth/             # Kimlik doğrulama sayfaları
+│   ├── quiz/             # Quiz sayfaları
+│   └── layout/           # Ortak layout dosyaları
+├── public/               # Statik dosyalar
+├── helpers/              # Yardımcı fonksiyonlar
+└── vendor/               # Composer bağımlılıkları
 ```
 
-#### Production (Apache)
+### 🤝 Katkıda Bulunma
+1. Fork'layın
+2. Feature branch oluşturun (`git checkout -b feature/AmazingFeature`)
+3. Commit'leyin (`git commit -m 'Add some AmazingFeature'`)
+4. Push'layın (`git push origin feature/AmazingFeature`)
+5. Pull Request oluşturun
 
-Apache DocumentRoot'u proje klasörüne yönlendirin ve mod_rewrite'ın etkin olduğundan emin olun.
+---
 
-## Proje Yapısı
+## English
 
-```
-quiz-master/
-├── config/
-│   ├── database.php        # Veritabanı yapılandırması
-│   └── app.php            # Uygulama ayarları
-├── controllers/
-│   ├── AuthController.php  # Kimlik doğrulama işlemleri
-│   ├── QuizController.php  # Quiz işlemleri
-│   ├── ScoreController.php # Skor ve liderlik tablosu
-│   └── MultiplayerController.php # Çok oyunculu mod
-├── models/
-│   ├── User.php           # Kullanıcı modeli
-│   ├── Question.php       # Soru modeli
-│   ├── Score.php          # Skor modeli
-│   ├── UserAnswer.php     # Kullanıcı cevapları modeli
-│   ├── GameRoom.php       # Oyun odası modeli
-│   ├── GamePlayer.php     # Oyuncu durumu modeli
-│   ├── GameAnswer.php     # Oyun cevapları modeli
-│   └── GameResult.php     # Oyun sonuçları modeli
-├── views/
-│   ├── layout/
-│   │   ├── header.php     # Sayfa başlığı
-│   │   └── footer.php     # Sayfa sonu
-│   ├── auth/
-│   │   ├── login.php      # Giriş sayfası
-│   │   └── register.php   # Kayıt sayfası
-│   ├── quiz/
-│   │   ├── home.php       # Ana sayfa
-│   │   ├── setup.php      # Quiz ayarları
-│   │   ├── play.php       # Quiz oyun ekranı
-│   │   └── result.php     # Sonuç ekranı
-│   ├── score/
-│   │   └── leaderboard.php # Liderlik tablosu
-│   └── multiplayer/
-│       ├── lobby.php      # Çok oyunculu lobi
-│       ├── waiting.php    # Bekleme odası
-│       ├── play.php       # Çok oyunculu oyun
-│       └── result.php     # Oyun sonucu
-├── public/
-│   ├── css/
-│   │   └── style.css      # Ana stil dosyası
-│   ├── js/
-│   │   └── app.js         # JavaScript dosyası
-│   └── audio/             # Ses dosyaları klasörü
-├── helpers/
-│   └── functions.php      # Yardımcı fonksiyonlar
-├── logs/                  # Log dosyaları
-├── .htaccess             # URL yönlendirme
-├── index.php             # Ana giriş dosyası
-├── composer.json         # Composer yapılandırması
-└── README.md             # Bu dosya─ result.php     # Sonuç ekranı
-│   └── score/
-│       └── leaderboard.php # Liderlik tablosu
-├── public/
-│   ├── css/
-│   │   └── style.css      # Ana stil dosyası
-│   ├── js/
-│   │   └── app.js         # JavaScript dosyası
-│   └── audio/             # Ses dosyaları klasörü
-├── .htaccess              # URL yönlendirme
-├── index.php              # Ana giriş dosyası
-├── composer.json          # Composer yapılandırması
-└── README.md              # Bu dosya
-```
+### 📋 About the Project
+Quiz Master is a modern quiz application developed using PHP Flight framework. Users can solve quizzes, compete in multiplayer mode, and manage the system through an admin panel.
 
-## Ses Dosyaları
+### ✨ Features
 
-Aşağıdaki ses dosyalarını `public/audio/` klasörüne eklemeniz gerekmektedir:
+#### 🎮 Player Features
+- **User Registration/Login System**: Email/password and social media login
+- **Quiz Solving**: Questions in different categories and difficulty levels
+- **Multiplayer Mode**: Real-time competition with opponents
+- **Leaderboard**: View highest scores
+- **Personal Statistics**: Performance tracking
 
-- `quiz-background.mp3/.ogg` - Arka plan müziği
-- `correct-answer.mp3/.wav` - Doğru cevap sesi
-- `wrong-answer.mp3/.wav` - Yanlış cevap sesi
-- `timer-warning.mp3/.wav` - Süre uyarı sesi
-- `quiz-complete.mp3/.wav` - Quiz tamamlama sesi
-- `button-click.mp3/.wav` - Buton tıklama sesi
+#### 🛠️ Admin Panel
+- **User Management**: View, edit and manage users
+- **Question Management**: Modern card-based question list
+- **Question Add/Edit**: Question creation with live preview
+- **Dashboard**: Detailed system statistics
+- **Statistics**: User activities and game data
 
-## Kullanım
+#### 🎨 Design Features
+- **Modern UI/UX**: Glassmorphism design
+- **Dark/Light Theme**: Automatic theme switching
+- **Responsive Design**: Mobile-friendly interface
+- **Smooth Animations**: User-friendly transitions
 
-### 1. Kayıt Olma
-- Ana sayfada "Kayıt Ol" butonuna tıklayın
-- Kullanıcı adı, e-posta ve şifre bilgilerinizi girin
-- Kayıt olduktan sonra otomatik olarak giriş yapılır
+### 🚀 Technologies
+- **Backend**: PHP 8+, Flight Framework
+- **Database**: MySQL/MariaDB
+- **Frontend**: HTML5, CSS3, JavaScript (ES6+)
+- **Styling**: CSS Custom Properties, Flexbox, Grid
+- **Authentication**: OAuth (Google, Facebook, Twitter)
+- **Real-time**: AJAX polling
 
-### 2. Tek Oyunculu Quiz
-- Ana sayfadan zorluk seviyesi seçerek hızlı başlayabilirsiniz
-- Veya "Özel Quiz Oluştur" ile detaylı ayarlar yapabilirsiniz:
-  - Zorluk seviyesi (Kolay, Orta, Zor, Karışık)
-  - Kategori seçimi
-  - Soru sayısı (5, 10, 15, 20)
+### 📦 Installation
 
-### 3. Çok Oyunculu Mod
-- Ana sayfadan "Çok Oyunculu Mod" butonuna tıklayın
-- **Oda Oluşturma:**
-  - "Oda Oluştur" butonuna tıklayın
-  - Zorluk ve soru sayısını seçin
-  - Oluşan 6 haneli kodu arkadaşınızla paylaşın
-- **Odaya Katılma:**
-  - Arkadaşınızdan aldığınız kodu girin
-  - "Katıl" butonuna basın
-- Her iki oyuncu "Hazırım" dediğinde oyun başlar
-- Aynı sorular, aynı süre, gerçek zamanlı yarışma!
+#### Requirements
+- PHP 8.0 or higher
+- MySQL 5.7 or higher
+- Web server (Apache/Nginx)
+- Composer
 
-### 4. Quiz Oynama
-- Her soru için 30 saniye süreniz vardır
-- 4 şıktan birini seçin
-- Cevapladıktan sonra doğru/yanlış gösterilir
-- 2 saniye sonra otomatik olarak sonraki soruya geçer
+#### Steps
+1. **Clone the project**
+   ```bash
+   git clone [repository-url]
+   cd bilg
+   ```
 
-### 5. Sonuçlar
-- Quiz bitiminde toplam skorunuz gösterilir
-- Başarı yüzdesi hesaplanır
-- Çok oyunculu modda kazanan belirlenir
-- Sonuçlarınızı sosyal medyada paylaşabilirsiniz
+2. **Install dependencies**
+   ```bash
+   composer install
+   ```
 
-### 6. Liderlik Tablosu
-- Günlük, haftalık, aylık ve tüm zamanların en iyilerini görün
-- Kendi sıralamanızı takip edin
+3. **Create database**
+   ```sql
+   CREATE DATABASE quiz_db;
+   ```
 
-## Veritabanına Soru Ekleme
+4. **Edit configuration files**
+   - `config/database.php` - Database connection
+   - `config/google.php` - Google OAuth
+   - `config/facebook.php` - Facebook OAuth
+   - `config/twitter.php` - Twitter OAuth
 
-SQL kullanarak yeni sorular ekleyebilirsiniz:
+5. **Create database tables**
+   - Run SQL files or they will be created automatically when the application runs for the first time
 
-```sql
-INSERT INTO questions 
-(question_text, option_a, option_b, option_c, option_d, correct_answer, difficulty, category) 
-VALUES 
-('Türkiye\'nin başkenti neresidir?', 'İstanbul', 'Ankara', 'İzmir', 'Bursa', 'b', 'easy', 'coğrafya'),
-('2 + 2 kaç eder?', '3', '4', '5', '6', 'b', 'easy', 'matematik');
+6. **Start web server**
+   ```bash
+   # If using WAMP/XAMPP
+   # Place the project in htdocs folder
+   
+   # Built-in server
+   php -S localhost:8000
+   ```
+
+### 🔧 Configuration
+
+#### Database Settings
+```php
+// config/database.php
+$host = 'localhost';
+$dbname = 'quiz_db';
+$username = 'your_username';
+$password = 'your_password';
 ```
 
-## Özelleştirme
-
-### Renk Teması
-`public/css/style.css` dosyasındaki CSS değişkenlerini düzenleyerek renk temasını değiştirebilirsiniz:
-
-```css
-:root {
-    --primary-color: #6366f1;
-    --secondary-color: #f59e0b;
-    --success-color: #10b981;
-    --danger-color: #ef4444;
-    /* ... */
-}
+#### OAuth Settings
+```php
+// config/google.php
+define('GOOGLE_CLIENT_ID', 'your_google_client_id');
+define('GOOGLE_CLIENT_SECRET', 'your_google_client_secret');
 ```
 
-### Süre Limiti
-`public/js/app.js` dosyasında `timeRemaining` değişkenini değiştirerek soru başına süreyi ayarlayabilirsiniz.
+### 🎯 Usage
 
-## Güvenlik Notları
+#### Admin Account
+Default admin account:
+- **Username**: admin
+- **Password**: admin123
 
-- Tüm kullanıcı girdileri `htmlspecialchars()` ile temizlenir
-- Şifreler `password_hash()` ile güvenli şekilde saklanır
-- SQL injection koruması için PDO prepared statements kullanılır
-- XSS koruması için output encoding uygulanır
+Created automatically on first login.
 
-## Lisans
+#### Admin Panel
+- `/admin/login` - Admin login
+- `/admin/dashboard` - Main control panel
+- `/admin/users` - User management
+- `/admin/questions` - Question management
 
-Bu proje MIT lisansı altında lisanslanmıştır.
+### 📁 Project Structure
+```
+bilg/
+├── config/                 # Configuration files
+├── controllers/            # MVC Controllers
+├── models/                # MVC Models
+├── views/                 # View files
+│   ├── admin/            # Admin panel views
+│   ├── auth/             # Authentication pages
+│   ├── quiz/             # Quiz pages
+│   └── layout/           # Common layout files
+├── public/               # Static files
+├── helpers/              # Helper functions
+└── vendor/               # Composer dependencies
+```
 
-## Destek
+### 🤝 Contributing
+1. Fork it
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-Sorularınız veya önerileriniz için issue açabilir veya pull request gönderebilirsiniz.
+### 📄 License
+This project is licensed under the MIT License.
+
+### 👥 Authors
+- **Development Team** - Initial work and development
+
+### 🙏 Acknowledgments
+- Flight PHP Framework
+- Font Awesome for icons
+- All contributors and testers
