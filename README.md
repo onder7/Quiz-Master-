@@ -1,5 +1,5 @@
 # Quiz Master - Bilgi Yarışması Uygulaması
-#english
+[#english](https://github.com/onder7/Quiz-Master-/blob/main/README.md#english)
 
 DEMO: https://quiz-test.online/
 Quiz Master, PHP Flight framework kullanılarak geliştirilmiş modern bir quiz uygulamasıdır. Kullanıcılar quiz çözebilir, çoklu oyuncu modunda yarışabilir ve admin paneli üzerinden sistemi yönetebilir.
