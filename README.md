@@ -1,10 +1,26 @@
 # Quiz Master - Bilgi Yarışması Uygulaması
 DEMO: https://quiz-test.online/
-FlightPHP framework'ü kullanılarak geliştirilmiş, mobil uyumlu bilgi yarışması uygulaması. Android için webview uygulaması ile birlikte kaynak kodlara onder7@gmail.com aeposta gödnererek iletişime geçebilirsiniz.
+Quiz Master, PHP Flight framework kullanılarak geliştirilmiş modern bir quiz uygulamasıdır. Kullanıcılar quiz çözebilir, çoklu oyuncu modunda yarışabilir ve admin paneli üzerinden sistemi yönetebilir.
+
+Android için webview uygulaması ile birlikte kaynak kodlara onder7@gmail.com aeposta gödnererek iletişime geçebilirsiniz.
 
 <img width="1906" height="924" alt="image" src="https://github.com/user-attachments/assets/091fdeab-a8ba-4dff-b5b6-61702132f1c9" />
 
 <img width="1898" height="925" alt="image" src="https://github.com/user-attachments/assets/e9fa9354-3197-4bd6-a794-5d21f258b841" />
+
+<img width="1892" height="904" alt="image" src="https://github.com/user-attachments/assets/b357d2ed-9f38-4ce7-b148-b3c902c6805e" />
+
+<img width="1891" height="930" alt="image" src="https://github.com/user-attachments/assets/151dd5bd-47ba-4a29-9e02-f2e32f4538b8" />
+
+<img width="1912" height="924" alt="image" src="https://github.com/user-attachments/assets/8f7ad712-945d-4612-8878-33e63e1bc04e" />
+
+<img width="1894" height="921" alt="image" src="https://github.com/user-attachments/assets/52fcb597-2c56-425b-a2ef-1402b1c5c79c" />
+
+<img width="1899" height="923" alt="image" src="https://github.com/user-attachments/assets/d5ad90a4-3479-4d8e-81b3-f6d6731e867c" />
+
+<img width="1899" height="920" alt="image" src="https://github.com/user-attachments/assets/2dc70935-6373-46ec-b009-7e58dca99651" />
+
+
 
 
 # Quiz Master - İnteraktif Quiz Uygulaması
